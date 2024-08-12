@@ -8,7 +8,7 @@ import { FacilityTag } from "@/components/article/facility-tag";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { useSearchStore } from "@/store/article-store";
 import getAllarticle from "@/app/api/article/getAllarticle";
-import NotRyuAlert from "@/components/google/notRyuAlert";
+
 import Cards from "@/components/ui/cards";
 import { CardsSkeleton } from "@/components/ui/cardSkeleton";
 export default function Page() {
@@ -78,9 +78,7 @@ export default function Page() {
             </Link>
           </div>
         ) : (
-          <div className="mx-auto">
-            <NotRyuAlert message=" あなたはログインしていないor龍大アカウントではないので記事の閲覧のみ可能です" />
-          </div>
+          <div className="mx-auto"></div>
         )}
         <div className="flex justify-center gap-x-4">
           <FacilityName action="search" />

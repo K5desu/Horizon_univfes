@@ -10,17 +10,14 @@ export default function Page({ params }: { params: { userid: string } }) {
   // 仮のユーザーデータと投稿データ
   const [loading, setLoading] = useState(false);
   const articlesRef = useRef<(user & { articles: articleCard[] }) | null>(null);
-  const isRyu = RyuAuthenticator();
   useEffect(() => {
     async function fetchData() {
-      if (isRyu) {
-        articlesRef.current = await getArticlesAndUserByUserId(params.userid);
-        // articlesを使用して何かを行う
-        setLoading(true);
-      }
+      articlesRef.current = await getArticlesAndUserByUserId(params.userid);
+      // articlesを使用して何かを行う
+      setLoading(true);
     }
     fetchData();
-  }, [isRyu]);
+  });
   const getUserInfo = () => {
     if (articlesRef.current) {
       const { articles, ...user } = articlesRef.current;
@@ -29,8 +26,6 @@ export default function Page({ params }: { params: { userid: string } }) {
       return null;
     }
   };
-
-  if (!isRyu) return <div>大学アカウントでログインしてください</div>;
 
   return (
     <>
@@ -41,7 +36,7 @@ export default function Page({ params }: { params: { userid: string } }) {
           {loading ? (
             <Cards
               owner={false}
-              isRyu={isRyu}
+              isRyu={true}
               posts={
                 articlesRef.current &&
                 (() => {
