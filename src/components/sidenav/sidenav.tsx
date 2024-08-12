@@ -10,15 +10,14 @@ export default function SideNav() {
         href="/"
       >
         <Image
-          src="/cover.jpg"
+          src="/Horizon.jpg"
           width={300}
           height={120}
           alt="cover"
           className="w-full h-full md:hidden"
         />
-
         <Image
-          src="/icon.png"
+          src="/Horizon.jpg"
           width={140}
           height={140}
           alt="icon"

@@ -1,7 +1,6 @@
 "use client";
 
 import type { PutBlobResult } from "@vercel/blob";
-import { CreateNewArticle } from "@/app/api/article/createNewArticle";
 import createUser from "@/app/api/user/createUser";
 import { useRef, useState, useEffect } from "react";
 import { useDebouncedCallback } from "use-debounce";
@@ -70,7 +69,7 @@ export default function Page() {
       body: file,
     });
     const newBlob = (await response.json()) as PutBlobResult;
-    await CreateNewArticle(title, newBlob.url, articleUrl);
+
     if (session?.user?.email)
       await createArticleByEmail(
         session.user.email,

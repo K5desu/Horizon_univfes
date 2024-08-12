@@ -32,8 +32,9 @@ export function FacilityTag(props: articleprops) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline">
-          {props.action == "create" && (tag == "" ? "タグ" : tag)}
-          {props.action == "search" && (searchtag == "" ? "タグ" : searchtag)}
+          {props.action == "create" && (tag == "" ? "作成年齢" : tag)}
+          {props.action == "search" &&
+            (searchtag == "" ? "作成年齢" : searchtag)}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">

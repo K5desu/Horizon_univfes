@@ -2,16 +2,15 @@
 // Depending on the size of the application, this would be stored in a database.
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { HomeIcon, AiIcon, AccountIcon } from "@/components/ui/icons";
+import { HomeIcon, AccountIcon } from "@/components/ui/icons";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import Login from "@/components/google/Login";
 import { RyuAuthenticator } from "@/lib/ryu-authentcator";
 
 const links = [
   { name: "ホーム", href: "/", icon: HomeIcon },
-  { name: "AIsearch", href: "/AI", icon: SmartToyIcon },
+  { name: "ホライズン", href: "/horizon", icon: SmartToyIcon },
 ];
-
 export default function NavLinks() {
   const isRyu = RyuAuthenticator();
   const pathname = usePathname();

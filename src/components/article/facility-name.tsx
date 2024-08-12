@@ -45,12 +45,12 @@ export function FacilityName(props: articleprops) {
         >
           {props.action == "search" &&
             (name == ""
-              ? "施設名"
+              ? "種類"
               : facilityName.find((framework) => framework.value === name)
                   ?.label)}
           {props.action == "create" &&
             (title == ""
-              ? "施設名"
+              ? "種類"
               : facilityName.find((framework) => framework.value === title)
                   ?.label)}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
