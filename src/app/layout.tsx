@@ -8,8 +8,8 @@ import SideNav from "@/components/sidenav/sidenav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI navigate",
-  description: "龍谷大学ハッカソン",
+  title: "Horizon",
+  description: "Horizon展示物",
 };
 
 export default function RootLayout({
