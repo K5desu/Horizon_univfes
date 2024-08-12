@@ -22,4 +22,10 @@ export const tags = [
     label: "作成日",
   },
 ];
-export const horizonmail = ["y220010", "y220020", "y220030", "y220040"];
+export const horizonmail = [
+  "y220010",
+  "y220020",
+  "y220030",
+  "y220040",
+  "u220139",
+];
