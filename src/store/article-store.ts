@@ -13,7 +13,6 @@ export type ArticleActions = {
   setArticleContent: (content: string) => void;
 };
 export type ArticleStore = ArticleState & ArticleActions;
-
 export const defaultInitState: ArticleState = {
   title: "",
   img: "",
