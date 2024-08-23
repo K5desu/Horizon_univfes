@@ -8,7 +8,6 @@ import { FacilityTag } from "@/components/article/facility-tag";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { useSearchStore } from "@/store/article-store";
 import getAllarticle from "@/app/api/article/getAllarticle";
-
 import Cards from "@/components/ui/cards";
 import { CardsSkeleton } from "@/components/ui/cardSkeleton";
 export default function Page() {
