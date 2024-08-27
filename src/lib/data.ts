@@ -15,11 +15,10 @@ export const facilityName = [
 export const tags = [
   {
     value: {
-      1: "一回生",
-      2: "二回生",
-      3: "三回生",
+      1: "発展班",
+      2: "基礎班",
     },
-    label: "作成日",
+    label: "作成者",
   },
 ];
 export const horizonmail = [
